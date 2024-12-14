@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@color/transparent"
+    app:cardElevation="8dp"
+    android:layout_height="wrap_content">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1"> <!-- This makes columns stretch to fill available space -->
+
+            <!-- First Row -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Column 1 -->
+                <TextView
+                    android:background="@drawable/custom_map_route_text_view_border"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/textTime"
+                    android:text="20d"
+                    android:padding="10dp"
+                    android:textSize="15dp"
+                    android:gravity="center"/>
+
+                <!-- Column 2 -->
+                <TextView
+                    android:background="@drawable/custom_map_route_text_view_border"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="20d"
+                    android:textSize="15dp"
+                    android:id="@+id/textDate"
+                    android:padding="10dp"
+                    android:gravity="center"/>
+            </TableRow>
+
+        </TableLayout>
+
+</androidx.cardview.widget.CardView>

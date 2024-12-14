@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">PET_TRACKER</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="default_web_client_id">78163752524-ml22647sk3e7i0dp9ks99qtjvamurcb4.apps.googleusercontent.com</string>
+    <string name="required">Required\n</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Spinner for register category of animal-->
+    <string-array name="animal_options">
+        <item>Select an pet...</item> <!-- This is a placeholder, not selectable -->
+        <item>Dog</item>
+        <item>Cat</item>
+    </string-array>
+
+    <!--Spinner for register category of animal-->
+    <string-array name="sim_balance">
+        <item>Select a data plan</item> <!-- Placeholder item, not selectable -->
+        <item>Magic Data 99 (2 GB)</item>
+        <item>Magic Data 199 (6 GB)</item>
+        <item>Magic Data 399 (24 GB)</item>
+        <item>Magic Data 499 (36 GB)</item>
+        <item>Magic Data 599 (48 GB)</item>
+        <item>Magic Data 699 (60 GB)</item>
+    </string-array>
+    <string name="mapbox_access_token">pk.eyJ1IjoiZGV4LTE1IiwiYSI6ImNseW55cDlidjBhazkyanIydXc4c3d5cXUifQ.vfRhzqvKwd7NcnKSdllrMw</string>
+</resources>

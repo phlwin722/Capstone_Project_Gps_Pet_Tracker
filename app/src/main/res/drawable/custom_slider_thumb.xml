@@ -1,0 +1,8 @@
+<!-- custom_slider_thumb.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <size
+        android:width="16dp"
+        android:height="16dp" /> <!-- Adjust the size of the dot as per your requirement -->
+    <solid android:color="#26A6FE" /> <!-- Set the color of the dot -->
+</shape>

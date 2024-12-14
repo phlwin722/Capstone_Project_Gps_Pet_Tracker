@@ -1,0 +1,6 @@
+<!-- res/drawable/circle_icon.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FF5722"/> <!-- Circle color -->
+    <size android:width="20dp" android:height="20dp"/> <!-- Adjust size as needed -->
+    <corners android:radius="20dp"/> <!-- Makes it circular -->
+</shape>

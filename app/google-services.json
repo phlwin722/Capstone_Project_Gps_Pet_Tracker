@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "140932625910",
+    "firebase_url": "https://gps-pet-tracker-v1-default-rtdb.firebaseio.com",
+    "project_id": "gps-pet-tracker-v1",
+    "storage_bucket": "gps-pet-tracker-v1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:140932625910:android:d9b507f83d15cce9b383d7",
+        "android_client_info": {
+          "package_name": "com.example.gps_pet_tracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuGEebQobIJfh3O85BzSAtnVxVLEwLIHc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Always include this permission -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Include only if your app benefits from precise location access. -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="PET TRACKER"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GPS_PET_TRACKER"
+        tools:targetApi="31">
+        <activity
+            android:name=".updateLoad"
+            android:exported="false" />
+        <activity
+            android:name=".Pet_info_details"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".User_map_set_location"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MapRoutePetHistory"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Sucessfull_update"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Sucessfull_register_information"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Sucessfull_delete_information"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Pet_Information_details"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Sucessfull_register_pet"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SuccessfulChangePassword"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Find_your_account_enter_password"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Find_your_account_email_verify"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Find_your_account"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Forget_new_change_password_home"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".forget_password_change_password_verification"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".change_password"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".forget_change_password"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MyInformation"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Registerr"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PasswordSetup"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".email_verification"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".email"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".create_user_successfull"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".create_user_password"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".create_user_loading_process"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".create_account"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".birth_day"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Home"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Mapbox Token -->
+        <meta-data
+            android:name="com.mapbox.token"
+            android:value="@string/mapbox_access_token" /> <!-- Skip Google Play Services location version validation -->
+        <meta-data
+            android:name="com.mapbox.maps.location.gms.SKIP_IF_INVALID_VERSION"
+            android:value="true" />
+
+        <service
+            android:name=".myForeGroundService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="location"
+            tools:ignore="ForegroundServicePermission" />
+
+        <receiver
+            android:name=".myBroadcastReciever"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+
+                <!--
+                Handles device boot
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                -->
+                <!-- Handles the "I'm aware" action from the notification -->
+                <action android:name="com.example.pettracker.ACTION_ACKNOWLEDGE_ALERTt" />
+                <action android:name="com.mapbox.navigation.trip.notification" />
+                <!-- Handles the "I'm aware" action from the notification -->
+                <action android:name="com.example.pettracker.ACTION_ACKNOWLEDGE_ALERT" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F5F5F5"
+    tools:context=".Register">
+
+    <!-- Existing content (ConstraintLayout and ScrollView) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/btn_backPage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/icons8_notification_50"
+            android:gravity="left"
+            app:backgroundTint="@null"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:gravity=""
+            android:text="Notification"
+            android:textColor="#000000"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/custom_logout_button"
+            android:gravity="center"
+            android:paddingLeft="30dp"
+            android:id="@+id/Registerr"
+            app:backgroundTint="@null"
+            app:icon="@drawable/baseline_add_24"
+            app:iconGravity="textStart"
+            app:iconSize="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="65dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerNotification"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+    </ScrollView>
+
+    <!-- Loading View -->
+    <FrameLayout
+        android:layout_marginTop="100dp"
+        android:id="@+id/loadingView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:visibility="gone"
+        android:gravity="center">
+ 
+        <include layout="@layout/custom_view_data_loading" />
+    </FrameLayout>
+
+    <!-- No Data View -->
+    <FrameLayout
+        android:layout_marginTop="100dp"
+        android:id="@+id/noDataView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <include layout="@layout/custom_view_no_data_found" />
+    </FrameLayout>
+
+    <!--No Internet Connection View-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:id="@+id/view_no_internet"
+        android:visibility="gone"
+        android:layout_marginTop="100dp">
+        <include layout="@layout/custom_view_no_internet"/>
+    </FrameLayout>
+</FrameLayout>

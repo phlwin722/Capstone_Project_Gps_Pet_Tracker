@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Settings">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/btn_backPage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/icons8_settings"
+            android:gravity="left"
+            app:backgroundTint="@null"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:gravity=""
+            android:text="Setting"
+            android:textColor="#000000"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:iconSize="25dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="16dp"
+            android:id="@+id/btn_Register"
+            android:background="@drawable/custom_logout_button"
+            android:gravity="center"
+            android:paddingLeft="30dp"
+            app:backgroundTint="@null"
+            app:icon="@drawable/baseline_add_24"
+            app:iconGravity="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="70dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="My account"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/btn_myprofile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="14dp"
+            android:paddingTop="10dp"
+            android:background="@drawable/custom_settings_button"
+            android:gravity="left"
+            app:backgroundTint="@null"
+            android:textColor="@color/black"
+            android:text="My profile" />
+
+        <Button
+            android:id="@+id/btn_set_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:background="@drawable/custom_settings_button"
+            android:gravity="left"
+            android:textSize="14dp"
+            android:text="Set Safe Zone Location"
+            android:textColor="@color/black"
+            app:backgroundTint="@null" />
+
+
+        <Button
+            android:id="@+id/btn_changePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:background="@drawable/custom_settings_button"
+            android:gravity="left"
+            android:textSize="14dp"
+            android:text="Change Password"
+            android:textColor="@color/black"
+            app:backgroundTint="@null" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textStyle="bold"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textColor="@color/black"
+            android:text="Support"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/btn_policy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:textSize="14dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/custom_settings_button"
+            android:gravity="left"
+            android:textColor="@color/black"
+            app:backgroundTint="@null"
+            android:text="GPS PET TRACKER Policies" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:paddingBottom="15dp"
+            android:textColor="@color/black"
+            android:text="Sign out"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:paddingTop="10dp"
+            android:id="@+id/btn_logout"
+            android:background="@drawable/custom_settings_button"
+            android:gravity="left"
+            android:textSize="14dp"
+            android:text="Logout"
+            android:textColor="@color/black"
+            app:backgroundTint="@null"/>
+    </LinearLayout>
+</FrameLayout>

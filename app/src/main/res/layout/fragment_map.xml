@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F5F5F5"
+    mapbox:context=".Register">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.mapbox.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            mapbox:layout_editor_absoluteX="0dp"
+            mapbox:layout_editor_absoluteY="0dp" >
+        </com.mapbox.maps.MapView>
+
+        <com.mapbox.navigation.ui.maneuver.view.MapboxManeuverView
+            android:id="@+id/maneuverView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="4sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:layout_margin="6sp"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="15dp"
+            android:focusable="false"
+            app:searchHintIcon="@null"
+            android:id="@+id/search_id"
+            app:iconifiedByDefault="false"
+            android:background="@drawable/custom_search"
+            android:layout_marginRight="15dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_map_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/map_type_button"
+            app:backgroundTint="@color/white"
+            android:layout_marginTop="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_safe_zone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/safe_zone"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="88dp"
+            app:layout_constraintTop_toTopOf="@id/btn_map_type"
+            app:backgroundTint="@color/white" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_mylocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/baseline_location_searching_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="88dp"
+            app:layout_constraintTop_toTopOf="@id/btn_safe_zone"
+            app:backgroundTint="@color/white" />
+
+
+
+        <!--   <com.google.android.material.floatingactionbutton.FloatingActionButton
+               android:id="@+id/btn_mylocation"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentEnd="true"
+               android:layout_marginRight="16dp"
+               android:src="@drawable/baseline_my_location_24"
+               app:backgroundTint="@color/white"
+               android:layout_marginTop="120dp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/btn_map_type" />
+               -->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Re Center"
+            android:visibility="gone"
+            android:id="@+id/reCenter"
+            android:background="@drawable/custom_login_with_google_button"
+            app:backgroundTint="@color/white"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="200dp"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <FrameLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/petInformation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="105dp">
+            <include layout="@layout/custom_info_pet"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/pet_direction"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="105dp">
+            <include layout="@layout/custom_pet_direction"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/map_type"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="60dp">
+            <include layout="@layout/custom_map_type_layout"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="gone"
+            android:id="@+id/info_panel"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/custominfopaneltripprogress"/>
+        </FrameLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="70dp"
+            android:text="View Information"
+            app:backgroundTint="@color/white"
+            android:id="@+id/viewInformation"
+            android:visibility="gone"
+            android:textColor="@color/black"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/arrival_pet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="60dp">
+            <include layout="@layout/custom_arrival_pet"/>
+        </FrameLayout>
+
+        <Button
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="DONE"
+            android:id="@+id/done_route"
+            app:backgroundTint="@color/white"
+            android:background="@drawable/custom_logout_button_cancell"
+            android:textColor="@color/buttn"
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:id="@+id/result_search_on_map_fragment"
+            android:layout_height="match_parent">
+            <include layout="@layout/custom_result_search_on_map_fragment"/>
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- ScrollView to make content scrollable -->
+</FrameLayout>
